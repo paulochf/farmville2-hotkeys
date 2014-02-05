@@ -1,7 +1,7 @@
 farmville2-hotkeys
 ==================
 
-AutoHotKey script for playing Zinga's FarmVille2
+AutoHotKey script for playing [Zinga's FarmVille2](http://zynga.com/game/farmville-two)
 
 
 # Features
@@ -45,9 +45,15 @@ For now, should be ```C:\Users\<username>\Documents```.
 
 # Motivation
 
-I just played FarmVille 2 to help my girlfriend, *Tati*. She's the main person behind my motivation to do this.
+I just played FarmVille 2 to help my girlfriend, **Tati**. She's the main person behind my motivation to do this.
 
 Love u, sweet! <3
+
+
+
+# Collaborate
+
+Bugs, ideas, code... this is GitHub, goddamn! =)
 
 
 
