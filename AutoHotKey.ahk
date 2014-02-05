@@ -17,7 +17,9 @@
 
 F6::
 If WinExist FarmVille 2 {
-	WinActivate
+	CoordMode, Mouse, Window
+	WinActivate, FarmVille 2
+	MouseGetPos, xpos, ypos
 	Gui, Add, Text,, Quantos cliques?
 	Gui, Add, Edit, vCliques
 	Gui, Add, Button, x9 y50 w60 Default, OK
@@ -30,7 +32,7 @@ If WinExist FarmVille 2 {
 		Gui, Submit, NoHide
 		
 		Loop %Cliques%
-			Click
+			Click %xpos%, %ypos%
 			Sleep 100
 		
 		WinActivate
