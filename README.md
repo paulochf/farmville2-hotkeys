@@ -24,8 +24,8 @@ AutoHotKey script for playing [Zinga's FarmVille2](http://zynga.com/game/farmvil
 4. Backup the file ```AutoHotKey.ahk```. Renaming it's enough.
 
 
-5. Get the file AutoHotKey.ahk from this repo and save to the folder where AutoHotKey get the script.
-For now, should be ```C:\Users\<username>\Documents```. 
+5. Get the file ```AutoHotKey.ahk``` [from this repo](https://github.com/paulochf/farmville2-hotkeys/blob/master/AutoHotKey.ahk) and save to the folder where AutoHotKey looks for the script.
+ 
 
 
 6. Open AutoHotKey and use it.
@@ -36,9 +36,9 @@ For now, should be ```C:\Users\<username>\Documents```.
 
 ## multiple clicks
 
-1. Point the mouse where you want to make multiple clicks
-2. Press F6
-3. Write how many clicks to trigger.
+1. Point the mouse where you want to make multiple clicks.
+2. Press F6.
+3. Choose how many clicks to trigger.
 4. Press OK.
 
 
