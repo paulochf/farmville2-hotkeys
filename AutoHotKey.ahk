@@ -25,6 +25,8 @@ If WinExist FarmVille 2 {
 	Gui, Add, UpDown, vCliques Range0-100000000, 10, 0x80
 	Gui, Add, Button, x9 y50 w60 Default, OK
 	Gui, Add, Button, x71 y50 w60, Fechar
+	Gui, Add, Progress, x9 y77 w122 h20 cBlue backgroundWhite -Smooth vCliquesProgresso, 0
+	;Gui, Add, StatusBar,,
 	Gui, Show, AutoSize
 	WinSet, AlwaysOnTop, On, AutoHotKey
 	Return
@@ -32,19 +34,25 @@ If WinExist FarmVille 2 {
 	ButtonOK:
 		Gui, Submit, NoHide
 		WinActivate, FarmVille 2
-		
-		Loop %Cliques%
+
+		iCliques := 0
+		Loop %Cliques% {
 			Click %xpos%, %ypos%
+			iCliques+=1
+			ProgressVal := (100*iCliques)/Cliques
+			GuiControl,, CliquesProgresso, %ProgressVal%
+			SB_SetText("Clicando " . iCliques . "/" . Cliques)
 			Sleep 100
+		}
 		
 		WinActivate
-	Return
+		Return
 
 	ButtonFechar:
 	GuiEscape:
 	GuiClose:
 		Gui, Destroy
-	Return
+		Return
 }
 Return
 
