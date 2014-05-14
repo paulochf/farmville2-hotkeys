@@ -17,22 +17,23 @@
 
 F6::
 If WinExist FarmVille 2 {
+	Gui, 1:Destroy
 	CoordMode, Mouse, Window
 	WinActivate, FarmVille 2
 	MouseGetPos, xpos, ypos
-	Gui, Add, Text,, Quantos cliques?
-	Gui, Add, Edit
-	Gui, Add, UpDown, vCliques Range0-100000000, 10, 0x80
-	Gui, Add, Button, x9 y50 w60 Default, OK
-	Gui, Add, Button, x71 y50 w60, Fechar
-	Gui, Add, Progress, x9 y77 w122 h20 cBlue backgroundWhite -Smooth vCliquesProgresso, 0
-	;Gui, Add, StatusBar,,
-	Gui, Show, AutoSize
+	Gui, 1:Add, Text,, Quantos cliques?
+	Gui, 1:Add, Edit
+	Gui, 1:Add, UpDown, vCliques Range0-100000000, 10, 0x80
+	Gui, 1:Add, Button, x9 y50 w60 Default, OK
+	Gui, 1:Add, Button, x71 y50 w60, Fechar
+	Gui, 1:Add, Progress, x9 y77 w122 h20 cBlue backgroundWhite -Smooth vCliquesProgresso, 0
+	;Gui, 1:Add, StatusBar,,
+	Gui, 1:Show, AutoSize
 	WinSet, AlwaysOnTop, On, AutoHotKey
 	Return
 
 	ButtonOK:
-		Gui, Submit, NoHide
+		Gui, 1:Submit, NoHide
 		WinActivate, FarmVille 2
 
 		iCliques := 0
@@ -40,18 +41,18 @@ If WinExist FarmVille 2 {
 			Click %xpos%, %ypos%
 			iCliques+=1
 			ProgressVal := (100*iCliques)/Cliques
-			GuiControl,, CliquesProgresso, %ProgressVal%
+			GuiControl, 1:, CliquesProgresso, %ProgressVal%
 			SB_SetText("Clicando " . iCliques . "/" . Cliques)
 			Sleep 100
 		}
-		
+
 		WinActivate
 		Return
 
 	ButtonFechar:
-	GuiEscape:
-	GuiClose:
-		Gui, Destroy
+	1:GuiEscape:
+	1:GuiClose:
+		Gui, 1:Destroy
 		Return
 }
 Return
