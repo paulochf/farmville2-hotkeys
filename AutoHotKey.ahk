@@ -24,7 +24,7 @@ If WinExist FarmVille 2 {
 	Gui, 1:Add, Text,, Quantos cliques?
 	Gui, 1:Add, Edit
 	Gui, 1:Add, UpDown, vCliques Range0-100000000, 10, 0x80
-	Gui, 1:Add, Button, x9 y50 w60 Default, OK
+	Gui, 1:Add, Button, x9 y50 w122 Default, Clica!
 	;Gui, 1:Add, Button, x71 y50 w60, Fechar
 	Gui, 1:Add, Progress, x9 y77 w122 h20 cBlue backgroundWhite -Smooth vCliquesProgresso, 0
 	;Gui, 1:Add, StatusBar,,
