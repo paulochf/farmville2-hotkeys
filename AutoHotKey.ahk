@@ -32,7 +32,7 @@ If WinExist FarmVille 2 {
 	WinSet, AlwaysOnTop, On, AutoHotKey
 	Return
 
-	ButtonOK:
+	ButtonClica!:
 		Gui, 1:Submit, NoHide
 		WinActivate, FarmVille 2
 
